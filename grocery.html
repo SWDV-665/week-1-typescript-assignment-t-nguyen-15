@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Groceries</title>
+    <script>
+      function getGroceries() {
+        let result = document.getElementById("output");
+        result.innerHTML = "<h1>Grocery List</h1>";
+        for (let i = 0; i < groceries.length; i++) {
+          result.innerHTML +=
+            "Product: " +
+            groceries[i].name +
+            "  ---- Quantity: " +
+            groceries[i].quantity +
+            "<br/>";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="getGroceries()">Show Groceries</button>
+    <p id="output"></p>
+    <script src="grocery.js"></script>
+  </body>
+</html>
